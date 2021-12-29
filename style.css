@@ -142,8 +142,8 @@ body
 .main
 {
     position: absolute;
-    width: 80%;
-    /* width: calc(100%-300px); */
+    /* width: 80%; */
+    width: calc(100% - 300px);
     left: 300px;
     min-height: 100vh;
     background: var(--white);
@@ -402,13 +402,14 @@ body
     color : var(--white);
 }
 
+
 @media (max-width : 991px){
     .navigation{
         left: -300px;
     }
 
     .main{
-        width: 100px;
+        width: 100%;
         left : 0;
     }
 
@@ -420,7 +421,10 @@ body
         left:0;
         width:300px;
     }
+    .main.navigation.active{
+        width: calc(100% - 300px);
 
+    }
     .cardBox{
         grid-template-columns: repeat(2,1fr);
     }
